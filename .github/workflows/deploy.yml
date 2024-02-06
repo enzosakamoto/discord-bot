@@ -13,11 +13,9 @@ jobs:
 
       - name: Copy files with SSH
         uses: easingthemes/ssh-deploy@main
-        env:
+        with:
           SSH_PRIVATE_KEY: ${{secrets.EC2_SSH_KEY}}
-          ARGS: "-rltgoDzvO --delete"
           SOURCE: "./"
           REMOTE_HOST: ${{secrets.REMOTE_HOST}}
           REMOTE_USER: ${{secrets.REMOTE_USER}}
           TARGET: "/home/ec2-user"
-          EXCLUDE: "/dist/, /node_modules/, **.env, rebuild_app.sh, watcher.sh"
