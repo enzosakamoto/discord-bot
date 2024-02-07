@@ -23,11 +23,15 @@ client.on('messageCreate', (message) => {
     message.reply('o mais lindo do mundo')
   }
 
-  if (
-    message.content === 'naka' ||
-    message.content === 'recruta' ||
-    message.content === 'orto'
-  ) {
+  if (message.content === 'naka') {
+    message.reply('maconha')
+  }
+
+  if (message.content === 'recruta') {
+    message.reply('maconha')
+  }
+
+  if (message.content === 'orto') {
     message.reply('maconha')
   }
 })
