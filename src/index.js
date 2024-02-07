@@ -11,10 +11,12 @@ const client = new Client({
 })
 
 client.on('ready', (bot) => {
-  console.log(`✅ ${bot.user.tag} is ready`)
+  console.log(`${bot.user.tag} is ready ✅`)
 })
 
 client.on('messageCreate', (message) => {
+  if (message.author.id === client.user?.id) return
+
   if (message.content === 'ping') {
     message.reply('pong')
   }
@@ -23,16 +25,16 @@ client.on('messageCreate', (message) => {
     message.reply('o mais lindo do mundo')
   }
 
-  if (message.content === 'naka') {
+  if (
+    message.content === 'naka' ||
+    message.content === 'recruta' ||
+    message.content === 'orto'
+  ) {
     message.reply('maconha')
   }
 
-  if (message.content === 'recruta') {
-    message.reply('maconha')
-  }
-
-  if (message.content === 'orto') {
-    message.reply('maconha')
+  if (message.content === 'salve') {
+    message.reply(`salve ${message.author.username}`)
   }
 })
 
