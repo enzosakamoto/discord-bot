@@ -30,7 +30,7 @@ client.on('messageCreate', (message) => {
     message.content === 'recruta' ||
     message.content === 'orto'
   ) {
-    message.reply('maconha')
+    message.reply('é us guri bão de mais da conta sô!')
   }
 
   if (message.content === 'salve') {
