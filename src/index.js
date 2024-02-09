@@ -36,6 +36,10 @@ client.on('messageCreate', (message) => {
   if (message.content === 'salve') {
     message.reply(`salve ${message.author.username}`)
   }
+
+  if (message.content === 'oie') {
+    message.reply(`oie ${message.author.username}`)
+  }
 })
 
 client.login(process.env.TOKEN)
